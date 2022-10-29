@@ -5,9 +5,10 @@ function maxSubarraySum(arr, num) {
   for (let i = 0; i < num; i++) {
     maxSum += arr[i];
   }
-  tempSum = maxSum;
+  tempSum = maxSum; // 17
+  // 3~8
   for (let i = num; i < arr.length; i++) {
-    tempSum = tempSum - arr[i - num] + arr[i];
+    tempSum = tempSum - arr[i - num] + arr[i]; // 17-arr[0]+arr[3]
     maxSum = Math.max(maxSum, tempSum);
   }
   return maxSum;
