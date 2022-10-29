@@ -1,20 +1,17 @@
-const isSubsequence = (str1, str2) => {
-  var i = 0;
-  var j = 0;
-  if (!str1) return true;
+function isSubsequence(str1, str2) {
+  let i = 0;
+  let j = 0;
   while (j < str2.length) {
-    if (str2[j] === str1[i]) {
-      console.log("i : ", i);
+    if (str1[i] === str2[j]) {
       i++;
     }
-    if (i === str1.length) {
-      console.log("true i: ", i);
+    if (str1.length === i) {
       return true;
     }
     j++;
   }
   return false;
-};
+}
 
 isSubsequence("hello", "hello world"); // true
 isSubsequence("sing", "sting"); // true
