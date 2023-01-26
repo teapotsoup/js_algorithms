@@ -11,15 +11,17 @@ function sameFrequency(str1, str2) {
 
   for (let i = 0; i < str2.length; i++) {
     const letter = str2[i];
-    if (!str1Obj[letter]) {
+    if (!str1Obj[letter] || str1Obj[letter] === 0) {
       return false;
+    } else {
+      str1Obj[letter] -= 1;
     }
   }
   return true;
 }
 console.log(sameFrequency(182, 281));
 console.log(sameFrequency(34, 14));
-console.log(sameFrequency(3589578, 5879385));
+console.log(sameFrequency(35895786, 58793857));
 console.log(sameFrequency(22, 222));
 
 // sameFrequency(182, 281); // true
